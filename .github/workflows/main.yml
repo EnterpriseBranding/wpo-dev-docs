@@ -1,0 +1,12 @@
+name: ApiGen
+
+on: [push]
+
+jobs:
+  apigen:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ApiGen Docs Generator
+      uses: varunsridharan/action-apigen@master
+    - run: git clone https://github.com/wponion/wponion
+    - run: ls -lah
