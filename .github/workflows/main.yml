@@ -8,10 +8,11 @@ jobs:
     steps:
     #- name: ApiGen Docs Generator
     #  uses: varunsridharan/action-apigen@master
-    - run: ls -lah
+    - name: WPOnion Stable Version PHP DOC
     - run: cd /tmp/ && git clone https://github.com/wponion/wponion
-    - run: cd /tmp/ && git clone https://github.com/wponion/wponion wpo-dev && cd ./wp-dev/ && git checkout development
-    - run: cd /tmp/ && ls -lah
-    - run: cd /tmp/wponion/ && ls -lah
-    - run: cd /tmp/wp-dev/ && ls -lah
+    - run: cd /tmp/wponion/
+    - run: ls -lah
+    - uses: varunsridharan/action-apigen@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - run: ls -lah
