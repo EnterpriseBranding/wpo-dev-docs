@@ -10,6 +10,8 @@ jobs:
     #  uses: varunsridharan/action-apigen@master
     - run: ls -lah
     - run: cd /tmp/ && git clone https://github.com/wponion/wponion
-    - run: cd /tmp/ && git clone https://github.com/wponion/wponion wpo-dev && git checkout development
+    - run: cd /tmp/ && git clone https://github.com/wponion/wponion wpo-dev && cd ./wp-dev/ && git checkout development
     - run: cd /tmp/ && ls -lah
+    - run: cd /tmp/wponion/ && ls -lah
+    - run: cd /tmp/wp-dev/ && ls -lah
     - run: ls -lah
