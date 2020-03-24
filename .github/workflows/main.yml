@@ -6,7 +6,8 @@ jobs:
   apigen:
     runs-on: ubuntu-latest
     steps:
-    - name: ApiGen Docs Generator
-      uses: varunsridharan/action-apigen@master
+    #- name: ApiGen Docs Generator
+    #  uses: varunsridharan/action-apigen@master
+    - run: ls -lah
     - run: git clone https://github.com/wponion/wponion
     - run: ls -lah
