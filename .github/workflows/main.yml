@@ -9,5 +9,7 @@ jobs:
     #- name: ApiGen Docs Generator
     #  uses: varunsridharan/action-apigen@master
     - run: ls -lah
-    - run: git clone https://github.com/wponion/wponion
+    - run: cd /tmp/ && git clone https://github.com/wponion/wponion
+    - run: cd /tmp/ && git clone https://github.com/wponion/wponion wpo-dev && git checkout development
+    - run: cd /tmp/ && ls -lah
     - run: ls -lah
